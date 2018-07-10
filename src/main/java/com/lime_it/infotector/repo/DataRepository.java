@@ -6,5 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import com.lime_it.infotector.model.Data;
 
 public interface DataRepository extends CrudRepository<Data, Integer> {
-    List<Data> findByData_Columns(String data_Columns);
+    List<Data> findByDataColumns(String data_Columns);
+    List<Data> findByFileId(String fileId);
 }

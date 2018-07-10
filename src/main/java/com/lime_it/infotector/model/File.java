@@ -28,30 +28,30 @@ public class File implements Serializable {
    private int id;
    
    @NotEmpty(message = "The file name must not be null")
-   private String file_Name;
+   private String fileName;
    
    @NotEmpty(message = "The file size must not be null")
-   private String file_Size;
+   private String fileSize;
    
    @NotEmpty(message = "The file format must not be null")
-   private String file_Format;
+   private String fileFormat;
    
    @NotEmpty(message = "The file contents must not be null")
-   private String file_Contents;
+   private String fileContents;
    
    @NotEmpty(message = "The file savetime must not be null")
-   private String file_Savetime;
+   private String fileSavetime;
    
    @NotEmpty(message = "The file id must not be null")
-   private String file_Id;
+   private String fileId;
    
    public File(String Name, String Format, String Contents, String Savetime, String Id, String Size){
-      this.file_Contents=Contents;
-      this.file_Format=Format;
-      this.file_Id=Id;
-      this.file_Name=Name;
-      this.file_Savetime=Savetime;
-      this.file_Size=Size;
+      this.fileContents=Contents;
+      this.fileFormat=Format;
+      this.fileId=Id;
+      this.fileName=Name;
+      this.fileSavetime=Savetime;
+      this.fileSize=Size;
    }
    
 }

@@ -6,6 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.lime_it.infotector.model.File;
 
 public interface FileRepository extends CrudRepository<File, Integer> {
-    List<File> findByFile_Name(String file_Name);
-    List<File> findByFiel_Id(String file_Id);
+    List<File> findByFile_Name(String fileName);
+    List<File> findByFiel_Id(String fileId);
+    void deleteByFileId(String fileId);
 }

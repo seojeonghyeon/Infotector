@@ -29,8 +29,13 @@ public class LogFile implements Serializable {
    private int id;
    
    @NotEmpty(message = "The log time must not be null")
-   private String log_time;   
+   private String logTime;   
    
    @NotEmpty(message = "The file id log must not be null")
-   private String file_Id_log;   
+   private String logFileId;   
+   
+   public LogFile(String logTime, String logFileId){
+	   this.logTime=logTime;
+	   this.logFileId=logFileId;
+   }
 }

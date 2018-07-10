@@ -20,7 +20,6 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @Table(name = "tb_data")
-
 public class Data implements Serializable {
    private static final long serialVersionUID = 1L;
    @Id
@@ -36,9 +35,13 @@ public class Data implements Serializable {
    @NotEmpty(message = "The data methods must not be null")
    private String data_Methods;   
    
-   public Data(String Columns, String Types, String Methods){
+   @NotEmpty(message = "The file ID must not be null")
+   private String fileId;   
+   
+   public Data(String Columns, String Types, String Methods, String fileId){
       this.data_Columns=Columns;
       this.data_Types=Types;
       this.data_Methods=Methods;
+      this.fileId=fileId;
    }
 }

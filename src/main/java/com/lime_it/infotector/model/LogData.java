@@ -1,4 +1,5 @@
 package com.lime_it.infotector.model;
+
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -19,18 +20,21 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @Table(name = "tb_logdata")
-public class LogData implements Serializable{
-   /**
-    * 
-    */
-   private static final long serialVersionUID = 1L;
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private int id;
-   
-   @NotEmpty(message = "The log time must not be null")
-   private String log_time;   
-   
-   @NotEmpty(message = "The data log must not be null")
-   private String data_log;   
+public class LogData implements Serializable {
+	private static final long serialVersionUID = 7866308154766966953L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@NotEmpty(message = "The log time must not be null")
+	private String logTime;
+
+	@NotEmpty(message = "The data log must not be null")
+	private String logData;
+	
+	public LogData(String logTime, String logData){
+		this.logTime=logTime;
+		this.logData=logData;
+	}
 }
